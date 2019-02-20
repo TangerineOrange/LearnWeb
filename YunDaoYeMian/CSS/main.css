@@ -24,7 +24,7 @@ textarea {
 	//为了使文本段落左右两边对齐
 p{ text-align:justify; text-justify:distribute;} 
 
-
+/* ---------------------------------------------------------------------------------------*/
 
 
 /*top navi start*/
@@ -38,8 +38,10 @@ p{ text-align:justify; text-justify:distribute;}
 .inner{
 	width: 1200px;
 	height: 100px;
-	background-color: pink;
+	/*background-color: pink;*/
 	margin: 0  auto;
+	line-height: 100px;
+
 }
 
 .logo{
@@ -52,11 +54,69 @@ p{ text-align:justify; text-justify:distribute;}
 
 .nav li{
 	float: left;
+	margin-right: 40px; 
+}
+
+.nav li a {
+	color:#333333;
+	text-decoration: none;
+}
+.nav li a:hover{
+	color:#2288f6; 
+}
+/*top navi stop*/
+
+/*banner start*/
+
+.banner{
+	height: 620px;
+	background: url("../res/banner.jpg") no-repeat top center;
+}
+
+/*banner end*/
+
+
+/*our service start*/
+
+.service{
+	width: 1055px;
+	height: 660px;
+	/*background-color: pink;*/
+	margin:  75px auto 0; 
 }
 
 
 
-/*top navi stop*/
+.service-hd{
+	border-top: 0.5px solid #ccc;
+	margin:  0 25px;
+}
+
+.service-hd h3{
+	width: 167px;
+	height: 46px;
+	margin: -15px auto 0;
+}
+
+.service-hd p{
+	align-items: center;
+	font-size: 12px;
+	color: #666;
+	line-height: 26px;
+	text-align: center;
+	width: 830px;
+	margin: 20px auto 0;
+}
+
+/*our service end*/
+
+
+/*footer start*/
+.footer{
+	height: 1000px;
+	background-color: white;
+}
+/*footer end*/
 
 
 
