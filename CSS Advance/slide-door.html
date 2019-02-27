@@ -7,22 +7,72 @@
 
 	<style>
 
-	
+	body{
+		margin: 0;
+	}
+
+
+	ul,li{
+		list-style: none;
+	}
+
+	a{
+		text-decoration: none;
+		margin: 0 10px;
+	}
+
+	li{
+		float: left;
+	}
+
+	.slide-left{
+		height: 33px;
+		background: url(to.png) no-repeat;
+		padding-left: 17px;
+		display: inline-block;
+	}
+	.slide-right{
+		height: 33px;
+		background: url(to.png) no-repeat right;
+		padding-right: 17px;
+		display: inline-block;
+		color: white;
+		text-align: center;
+		line-height: 33px;
+	}
+
+	.big-bg{
+		padding-top: 20px;
+		height: 100px;
+		background:url(wx.jpg) repeat-x;
+	}
+
+	a:hover .slide-right,a:hover .slide-left {
+		background-image: url(ao.png);
+	}
+/*a:hover .slide-left{
+		background: url(ao.png) no-repeat;
+	}
+	a:hover .slide-mid{
+		background: url(ao.png) no-repeat center;
+	}*/
 		
 	</style>
 </head>
 <body>
 
-	<div>
-		<ul>
-		<li><a href="#"><span>导航栏内容</span></a></li>
-		<li><a href="#"><span>导航栏内容</span></a></li>
-		<li><a href="#"><span>导航栏内容</span></a></li>
-		<li><a href="#"><span>导航栏内容</span></a></li>
-	</ul>
+	<div  class="big-bg">
+		 <a href="#"  >
+ 				<div  class="slide-left"> 
+				<div  class="slide-right">
+				首页-微信-一种生活方式
+				</div>
+				</div>
+ </a>
+
 	</div>
 
-	
 
+				
 </body>
 </html>

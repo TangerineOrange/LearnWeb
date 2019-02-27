@@ -45,15 +45,20 @@ textarea {
 
 /*为了使文本段落左右两边对齐*/
 p{ 
-	text-align:justify; 
 	text-justify:distribute;
+	text-align:justify; 
 } 
 
 
 
 .top{
-
+	width: 200px;
+	height: 100px;
+	border: 1px solid blue;
+	color: red;
+	font-size: 12px;
 }
+
 
 .header{
 	width: 1200px;
