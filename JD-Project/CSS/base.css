@@ -1,0 +1,107 @@
+/*只写公共样式*/
+
+
+
+
+body, div, dl, dt,
+dd, ul, ol, li, 
+h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, 
+input, p, blockquote, 
+th, td {
+	margin:0; 
+	padding:0;
+	 }
+
+body { 
+	font:12px/1.5 Microsoft YaHe,tahoma,arial,\\5b8b\4f53; 
+	color:#666; 
+	font-family:Verdana, Microsoft YaHei, Simsun; 
+	background:#fff; 
+	line-height:24px; 
+}
+
+.hide,.none{
+	display: none;
+}
+
+.clearfix:after{
+	visibility: hidden;
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0;
+}
+
+.clearfix{
+	*zoom:1;
+}
+
+
+
+fieldset, img { 
+	border:0; 
+}
+
+ol, ul,li { 
+	list-style:none; 
+}
+
+h1, h2, h3, h4, h5, h6{ 
+	font-size:100%; 
+}
+
+em,i{ 
+	font-style:normal; 
+}
+
+img{
+	vertical-align: middle;
+}
+
+
+
+button{
+	cursor: pointer;
+}
+
+input, button, select, textarea { 
+	outline:none; 
+} 
+
+/*禁用了文本的拖拉，尤其在谷歌下*/
+textarea { 
+	resize:none; 
+	} 
+
+/*为了使文本段落左右两边对齐*/
+p{ 
+	text-justify:distribute;
+	text-align:justify; 
+} 
+
+
+/*版心*/
+.w{
+	width: 1190px;
+	margin: auto;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?q7a1t3');
+  src:  url('../fonts/icomoon.eot?q7a1t3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?q7a1t3') format('truetype'),
+    url('../fonts/icomoon.woff?q7a1t3') format('woff'),
+    url('../fonts/icomoon.svg?q7a1t3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
