@@ -1,5 +1,5 @@
 a{
-	color: #666;
+	color: #9E9B99;
 	text-decoration: none;
 }
 
@@ -47,17 +47,27 @@ a:hover{
 	height: 30px;
 	background-color: #e3e4e5;
 	border-bottom: 1px solid #dddddd;
-
 	/*行高会继承*/
 	line-height: 30px;
 }
 
 .shortcut a{
-	/*color: #9d9d9d;*/
+	color: #9d9d9d;
 	font-size: 12px;
 	height: 30px;
 	background-color: #e3e4e5;
-	border-bottom: 1px solid #dddddd;
+	padding: 0 10px;
+	position: relative;
+}
+
+.shortcut a:hover{
+	color:#c81523;
+}
+
+
+
+.shortcut .fl{
+	margin-left: 262px;
 }
 
 .shortcut .fr li{
@@ -68,38 +78,216 @@ a:hover{
 	float: right;
 }
 
-.shortcut i{
+.shortcut .fl i{
 	font-family: "icomoon";
 	font-style: normal;
 }
 
+.v-line{
+	margin-top:  10px;
+	background-color: #aaa;
+	width: 1px;
+	height: 10px;
+}
+
+.dropdown{
+	padding-right: 15px;
+	position: relative;
+}
+
+
+.dropdown a{
+	padding-right: 2px;
+}
+
+.dropdown i{
+	font-family: "icomoon";
+	font-style: normal;
+	font-size: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+ 
+
 	/*<!-- ShortCut End -->*/
 
 
+/*<!-- header Start -->*/
 
-.top{
-	width: 200px;
-	height: 100px;
-	border: 1px solid blue;
-	color: red;
+.header{
+	width: 100%;
+	height: 183px;
+	background-color: purple;
+}
+
+.inner{
+	height: 100%;
+	background-color: pink;
+	position: relative;
+}
+
+.header-logo{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: -31px;
+	box-shadow: 0 -9px 10px 1px rgba(0,0,0,.4);
+}
+
+.QR-code{
+	width: 60px;
+	height: 60px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	position: absolute;
+	right:  0;
+	top: 0;
+}
+
+.search{
+	width: 530px;
+	height: 40px;
+	position: absolute;
+	top: 31px;
+	left: 350px;
+}
+
+.search input{
+	width: 470px;
+	height: 38px;
+	border: 1px solid #F10215;
+	outline: none;
+	float: left;
+	font-size: 17px;
+	color: #ccc;
+}
+
+.search-btn{
+	width: 52px;
+	height: 40px;
+	background-color: #F10215;
+	float: right;
+}
+
+.search-photo-btn{
+	width: 50px;
+	height: 38px;
+	position: absolute;
+	background-color: white;
+	top:1px;
+	right: 59px;
+}
+
+.search  i{
+	font-family: "icomoon";
+	font-style: normal;
+	line-height: 38px;
+	font-size: 22px;
+}
+
+.search .search-btn i{
+	color: white;
+}
+
+.search .search-photo-btn i{
+	color: #ccc;
+}
+
+.search .search-photo-btn i:hover{
+	color: #F10215;
+}
+
+.hotwords{
+	width: 530px;
+	height: 18px;
+	position: absolute;
+	left: 350px;
+	top: 75px;
+	line-height: 18px;
+	overflow: hidden;
+}
+.hotwords  a {
+	font-size: 12px;
+	padding: 0 7px;
+}
+
+.hotwords a:hover {
+	color: #F10215;
+}
+
+.shopcar{
+	width: 180px;
+	height: 38px;
+	border: 1px solid #ccc;
+	background-color: white;
+	position: absolute;
+	top: 31px;
+	right: 85px;
+	text-align: center;
+	line-height: 38px;
+	color: #F10215;
+}
+
+.shopcar a{
 	font-size: 12px;
 }
 
-
-.header{
-	width: 1200px;
-	height: 200px;
-
+/*我的写法*/
+.shopcar-count{
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 14px;
+	border-radius: 50%;
+	background-color: #F10215;
+	color: white;
+	position: absolute;
+	top: 5px;
+	right: 25px;
 }
 
-.top-nav{
-
+/*京东写法*/
+.ci-count{  
+	position: absolute;
+    top: 5px;
+    left: 140px;
+    right: auto;
+    display: inline-block;
+    padding: 1px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #f10215;
+    border-radius: 7px;
+    min-width: 12px;
+    text-align: center;
 }
 
-.left-nav{
-	width: 300px;
-	height: 900px;
+
+.super-sale{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
 }
+
+.navitems{
+	position: absolute;
+	left: 
+}
+
+
+
+
+
+
+/*<!-- header End -->*/
+
+
+
 
 
 

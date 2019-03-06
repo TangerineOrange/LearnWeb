@@ -21,6 +21,11 @@ body {
 	line-height:24px; 
 }
 
+i{
+	font-family: "icomoon";
+	font-style: normal;
+}
+
 .hide,.none{
 	display: none;
 }
@@ -59,7 +64,9 @@ img{
 	vertical-align: middle;
 }
 
-
+input, button { 
+	border: 0; 
+} 
 
 button{
 	cursor: pointer;
@@ -104,4 +111,9 @@ p{
     url('../fonts/icomoon.svg?q7a1t3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+
+.style-red{
+	color: #c81523;
 }
