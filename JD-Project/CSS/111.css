@@ -108,11 +108,11 @@ a:hover{
 		right: 0;
 		top: 0;
 }
+/*<!-- ShortCut End -->*/
 
 
- 
 
-		/*<!-- ShortCut End -->*/
+
 
 
 /*<!-- header Start -->*/
@@ -311,4 +311,43 @@ li.v-line-ccc{
 		width: 1px;
 		height: 11px;
 }
+
 /*<!-- header End -->*/
+
+/* jd body Start*/
+.jd-body{
+	height: 480px;
+
+}
+
+.wing{
+	height: 480px;
+	background:#F0F3EF url(../res/wing-bg.png) no-repeat center;
+}
+
+.pro-sort-left{
+	width: 190px;
+	height: 480px;
+	background-color: white;
+	font-size: 14px;
+}
+
+.pro-sort-left li:hover{
+	background-color: #D9D9D9;
+}
+
+.pro-sort-left li{
+	display: list-item;
+	padding-left:15px;
+}
+
+.pro-sort-left li a{
+	color:#333;
+	/*padding: 0 2px;*/
+}
+
+.pro-sort-left li a:hover{
+	color:#F10215;
+}
+
+/* jd body End*/
