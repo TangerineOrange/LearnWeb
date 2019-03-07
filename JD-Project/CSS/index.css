@@ -67,7 +67,7 @@ a:hover{
 
 
 .shortcut .fl{
-	margin-left: 262px;
+	margin-left: 212px;
 }
 
 .shortcut .fr li{
@@ -119,13 +119,13 @@ a:hover{
 
 .header{
 	width: 100%;
-	height: 183px;
-	background-color: purple;
+	height: 140px;
+	background-color: #F0F3EF;
 }
 
 .inner{
 	height: 100%;
-	background-color: pink;
+	background-color: #F0F3EF;
 	position: relative;
 }
 
@@ -211,7 +211,8 @@ a:hover{
 }
 .hotwords  a {
 	font-size: 12px;
-	padding: 0 7px;
+	margin:0 7px;
+	/*padding: 0 7px;*/
 }
 
 .hotwords a:hover {
@@ -229,10 +230,11 @@ a:hover{
 	text-align: center;
 	line-height: 38px;
 	color: #F10215;
+	font-size: 14px;
 }
 
 .shopcar a{
-	font-size: 12px;
+	color: #F10215;
 }
 
 /*我的写法*/
@@ -276,16 +278,84 @@ a:hover{
 
 .navitems{
 	position: absolute;
-	left: 
+	left: 264px;
+	top: 100px;
+	font-size: 14px;
+	line-height: 24px;
+
+}
+
+
+.navitems ul{
+	 float: left;
+}
+.navitems li{
+	 float: left;
+	 padding: 0 12px;
+	color: #333;
+}
+
+.navitems li a{
+	color: #333;
+}
+
+
+.navitems li a:hover{
+	color: #f10215;
+}
+
+li.v-line-ccc{
+	margin: 6px 5px 0;
+	 padding: 0;
+	background-color: #ccc;
+	width: 1px;
+	height: 11px;
+}
+/*<!-- header End -->*/
+
+
+
+/*<!-- jd-body Start -->*/
+.jd-body{
+
+
 }
 
 
 
 
+/*<!-- 两翼广告 -->*/
+		<div class="wing">
+			
+
+		/*<!-- 左侧商品分类 -->*/
+		.pro-sort-left{
+
+		}
+			
+
+		/*<!-- 中间商品广告 -->*/
+		.ad-center{
+
+		}
+			
+
+		/*<!-- 右侧促销 -->*/
+		.sale-right{
+
+		}
+			
+
+		/*<!-- 右侧多种信息 -->*/
+		.mult-info-right"{
+
+			
+		}
 
 
-/*<!-- header End -->*/
 
+
+/*<!-- jd-body End -->*/
 
 
 
