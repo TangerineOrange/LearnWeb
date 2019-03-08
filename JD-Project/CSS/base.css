@@ -44,9 +44,7 @@ i{
 
 
 
-fieldset, img { 
-	border:0; 
-}
+ 
 
 ol, ul,li { 
 	list-style:none; 
@@ -60,13 +58,12 @@ em,i{
 	font-style:normal; 
 }
 
+img,input, button,fieldset { 
+	border: 0; 
+} 
 img{
 	vertical-align: middle;
 }
-
-input, button { 
-	border: 0; 
-} 
 
 button{
 	cursor: pointer;
@@ -81,17 +78,10 @@ textarea {
 	resize:none; 
 	} 
 
-/*为了使文本段落左右两边对齐*/
-p{ 
-	text-justify:distribute;
-	text-align:justify; 
-} 
-
-
 /*版心*/
 .w{
 	width: 1190px;
-	margin: auto;
+	margin:auto;
 }
 
 .fl{

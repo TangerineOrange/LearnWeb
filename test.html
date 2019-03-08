@@ -3,8 +3,215 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
+	<style>
+		
+		.father{
+			width: 1000px;
+			height: 900px;
+			background-color: blue;
+		}
+
+		.son1{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+		.son2{
+			height: 200px;
+			background-color: green;
+		}
+
+		.son3{
+			height: 200px;
+			background-color: green;
+		}
+
+
+ img { 
+	border:0; 
+}
+
+
+input, button { 
+	border: 0; 
+} 
+
+
+button{
+	cursor: pointer;
+}
+
+input, button, select, textarea { 
+	outline:none; 
+} 
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?q7a1t3');
+  src:  url('../fonts/icomoon.eot?q7a1t3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?q7a1t3') format('truetype'),
+    url('../fonts/icomoon.woff?q7a1t3') format('woff'),
+    url('../fonts/icomoon.svg?q7a1t3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.style-red{
+	color: #c81523;
+}
+
+/*版心*/
+.w{
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.clearfix:after{
+	visibility: hidden;
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0;
+}
+
+.clearfix{
+	*zoom:1;
+}
+
+
+		/* jd body Start*/
+.jd-body{
+	height: 480px;
+	background:#F0F3EF url(res/wing-bg.png) no-repeat center;
+}
+
+.jd-body-content{
+	height: 100%;
+}
+
+.pro-sort-left{
+	width: 190px;
+	height: 480px;
+	background-color: white;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.pro-sort-left ul{
+	padding: 6px 0;
+}
+
+.pro-sort-left li:hover{
+	background-color: #D9D9D9;
+}
+
+.pro-sort-left li{
+	height: 26px;
+	display: list-item;
+	padding-left:15px;
+}
+
+.pro-sort-left li a{
+	color:#333;
+	/*padding: 0 2px;*/
+}
+
+.pro-sort-left li a:hover{
+	color:#F10215;
+}
+
+.ad-center{
+	display: inline-block;
+}
+
+.sale-right{
+	display: inline-block;
+}
+	</style>
 </head>
 <body>
+
+
+		<!-- 两翼广告 -->
+<div class="jd-body">
+		
+			<!-- 设置版心 -->
+		<div class="w jd-body-content">
+				
+			<!-- 左侧商品分类 -->
+			<div class="pro-sort-left">
+
+				<!-- 京东做的 -->
+				<ul>
+					<li data-index="1" ><a href="#">家用电器</a></li>
+				
+					<li  data-index="2" >
+						<a href="#">手机</a>/<a href="#">运营商</a>/<a href="#">数码</a>
+					</li>
+				
+					<li data-index="3">
+						<a href="#">电脑</a>/<a href="#">办公</a></li>
+				
+					<li data-index="4"><a href="#">家居</a>/<a href="#">家具</a>/<a href="#">家装</a>/<a href="#">厨具</a></li>
+				
+					<li data-index="5"><a href="#">男装</a>/<a href="#">女装</a>/<a href="#">童装</a>/<a href="#">数码</a></li>
+				
+					<li data-index="6"><a href="#">美妆</a>/<a href="#">各户情节</a>/<a href="#">宠物</a></li>
+				
+					<li data-index="7"><a href="#">美妆</a>/<a href="#">箱包</a>/<a href="#">钟表</a>/<a href="#">珠宝</a></li>
+				
+					<li data-index="8"><a href="#">男鞋</a>/<a href="#">运动</a>/<a href="#">户外</a></li>
+				
+					<li data-index="9"><a href="#">房产</a>/<a href="#">汽车</a>/<a href="#">汽车用品</a></li>
+				
+					<li data-index="10"><a href="#">母音</a>/<a href="#">玩具乐器</a></li>
+				
+					<li data-index="11"><a href="#">食品</a>/<a href="#">酒类</a>/<a href="#">先生</a>/<a href="#">特产</a></li>
+				
+					<li data-index="12"><a href="#">艺术</a>/<a href="#">礼品鲜花</a>/<a href="#">农资绿植</a></li>
+				
+					<li data-index="13"><a href="#">计生用品</a>/<a href="#">医药保健</a></li>
+				
+					<li data-index="14"><a href="#">母音</a>/<a href="#">玩具乐器</a></li>
+				
+					<li data-index="15"><a href="#">食品</a>/<a href="#">酒类</a>/<a href="#">先生</a>/<a href="#">特产</a></li>
+				
+					<li data-index="16"><a href="#">艺术</a>/<a href="#">礼品鲜花</a>/<a href="#">农资绿植</a></li>
+				
+					<li data-index="17"><a href="#">计生用品</a>/<a href="#">医药保健</a></li>
+				
+					<li data-index="18"><a href="#">工业品</a></li>
+				</ul>
+
+			</div>
+
+			<!-- 中间商品广告 -->
+			<div class="ad-center">
+				<img src="res/naruto.jpg" width="320" alt="">
+			</div>
+
+			<!-- 右侧促销 -->
+			<div class="sale-right">
+				
+			</div>
+
+			<!-- 右侧多种信息 -->
+			<div class="mult-info-right">
+				
+			</div>
+		</div>
+</div>
+
 	
 </body>
 </html>
