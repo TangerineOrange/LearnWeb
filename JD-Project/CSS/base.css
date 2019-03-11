@@ -107,3 +107,28 @@ textarea {
 .style-red{
 	color: #c81523;
 }
+
+.bg-blue{
+    background-color: #90b0c6;
+}
+
+.bg-yellow{
+    background-color: #e0b95a;
+}
+
+.bg-red{
+	background-color: #e47f7f;
+}
+
+.bg-gold{
+	background-color: #ebeaea;
+}
+
+.bg-gold-hard{
+	background-color: #d1c5ae;
+}
+
+.h-line{
+	height: 1px;
+	width: 100%;
+}

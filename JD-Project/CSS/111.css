@@ -469,22 +469,101 @@ li.v-line-ccc{
 }
 
 
-
 .news{
 	background-color: white;
-	height: 150px;
+	height: 130px;
+	padding: 5px 15px 0;
+}
+ 
+.news-top p{
+	color: black;
+	font-size: 13px;
+	float: left;
+	font-weight: 700;
+}
 
+.news-top a{
+	float: right;
+}
+
+.news ul{
+	height: 95px;
+	padding-top:  5px;
+	border-bottom:  1px solid #ebeaea;
+}
+
+.news ul li span{
+	color: white;
+	border-radius: 2px;
+	padding: 0 5px;
+}
+
+.news ul li a{
+	line-height: 20px;
+	width: 160px;
+	height: 20px;
+	display: block;
+	text-overflow: ellipsis;
+	overflow:hidden; 
+	white-space: nowrap;
+	margin: 1px 0;
+	color: #666;
+}
+
+.news ul li a:hover{
+	color: #e43f3b;
 }
 
 .service{
-	height: 150px;
+	padding: 15px 15px 0;
+	height: 170px;
 	background-color: white;
+	position: relative;
 }
 
+.service table{
+	width: 160px;
+	    border-spacing: 0px;
+	text-align: center;
+}
 
+.service table a{
+	line-height: 22px;
+	width: 38px;
+	padding: 8px 1px 2px;
+	height: 45px;
+	display: block;
+	color: #d1c5ae;
+}
 
+.service table a:hover{
+	color: #e43f3b;
+}
 
- 
+.service table i{
+	display: block;
+	font-size: 22px;
+}
+
+.sale-icon-1{
+	line-height: 18px;
+	height: 18px;
+	color: white;
+	background-color: #e43f3b;
+	position: absolute;
+	left: 42px;
+	top: 67px;
+}
+
+.sale-icon-2{
+	line-height: 18px;
+	height: 18px;
+	color: white;
+	background-color: #e43f3b;
+	position: absolute;
+	left: 122px;
+	top: 17px;
+}
 
 
 /* jd body End*/
