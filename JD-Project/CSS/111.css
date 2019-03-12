@@ -111,8 +111,11 @@ a:hover{
 /*<!-- ShortCut End -->*/
 
 
-
-
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
 
 
 /*<!-- header Start -->*/
@@ -312,8 +315,15 @@ li.v-line-ccc{
 		width: 1px;
 		height: 11px;
 }
-
 /*<!-- header End -->*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+
 
 /* jd body Start*/
 .jd-body{
@@ -363,13 +373,73 @@ li.v-line-ccc{
 
 /*<!-- 中间商品广告 -->*/
 .ad-center{
+	position: relative;
+	width: 610px;
 	height: 480px;
 	float: left;
 }
 
 .ad-center img{
-	margin: 10px 10px 0;
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }
+
+.btn-left,.btn-right{
+	width: 25px;
+	height: 40px;
+	position: absolute;
+	color: rgba(255,255,255,.4);
+	background-color: rgba(0,0,0,.2);
+	text-align: center;
+	top: 50%;
+	margin-top: -20px;
+	line-height: 40px;
+	transition: background-color .2s ease;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.btn-left:hover,.btn-right:hover{
+	background-color: rgba(0,0,0,.6);
+}
+
+.btn-left{
+	left: 10px;
+}
+
+.btn-right{
+	right: 10px;
+}
+
+.index{
+	width: 150px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	bottom: 8%;
+	left: 10%;
+	background-color: pink;
+}
+
+.index span{
+	width: 6px;
+	height: 6px;
+	border: 2px solid white;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.index span:hover{
+	width: 10px;
+	height: 10px;
+	/*border: 2px solid;*/
+	/*border-color: rgba(255,255,255,.4);*/
+	display: inline-block;
+	background-color: white;
+	border-radius: 50%;
+}
+
 
 /*<!-- 右侧促销 -->*/
 .sale-right{
@@ -564,6 +634,139 @@ li.v-line-ccc{
 	left: 122px;
 	top: 17px;
 }
-
-
 /* jd body End*/
+
+
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+
+/*<!-- Flash Deals Start -->*/
+	
+	.flash-deals{
+		height: 275px;  /*  275+30  */
+		padding: 30px 0;
+		background-color: #F0F3EF;
+	}
+
+	.fd-body{
+		height: 275px;
+	}
+
+	.count-down{
+		width: 190px;
+		height: 225px;
+		background-color: #E83632;
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding-top: 50px;
+	}
+
+	.count-down,.fds,.fd-turn{
+		float: left;
+	}
+	
+	.count-down h1{
+		line-height: 40px;
+		height: 40px;
+		font-size: 34px;
+		font-weight: 400;
+	}
+
+	.count-down h2{
+		line-height: 30px;
+		height: 30px;
+		font-size: 18px;
+		font-weight: 400;
+		color: rgba(255,255,255,.4);
+	}
+
+	.count-down i{
+		font-size: 35px;
+	}
+
+	.count-down p{
+		line-height: 30px;
+		height: 30px;
+		font-size: 16px;
+	}
+
+	
+	.fds{
+		height: 100%;
+	}
+
+	 
+
+	.fd-1,.fd-2,.fd-3,.fd-4{
+		width: 199px;
+		height: 235px;
+		border-right: 1px solid #F0F0F0;
+		background-color: white;
+		padding-top: 40px;
+		float: left;
+
+	}
+
+	.fds img{
+		display: block;
+		margin: 0 auto;
+	}
+
+	.fds a{
+		line-height: 20px;
+		width: 162px;
+		height: 20px;
+		display: block;
+		text-overflow: ellipsis;
+		overflow:hidden; 
+		white-space: nowrap;
+		margin: 12px auto 0;
+		color: #666;
+	}
+
+	.price{
+		display: block;
+		width: 160px;
+		margin: 18px auto 0;
+		height: 21px;
+		border: 1px solid #E6382F;
+		text-align: center;
+		line-height: 21px;
+	}
+
+	.new-p{
+		width: 80px;
+		height: 100%;
+		color: white;
+		font-weight: 700;
+		background-color: #E6382F;
+		float: left;
+	}
+
+	.old-p{
+		width: 80px;
+		height: 100%;
+		color: #B7BCB8;
+		background-color: white;
+		float: left;
+		text-decoration: line-through;
+	}
+
+	.fd-turn{
+		width: 170px;
+		height: 259px;
+		border-color: white;
+		border-style: solid;
+		border-width: 8px 15px;
+		background-color: #F0F0F0;
+		float: left;
+	}
+
+	
+
+
+	/*<!-- Flash Deals End -->*/
