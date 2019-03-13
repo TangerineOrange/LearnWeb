@@ -757,11 +757,11 @@ li.v-line-ccc{
 	}
 
 	.fd-turn{
-		width: 170px;
-		height: 259px;
+		width: 180px;
+		height: 261px;
 		border-color: white;
 		border-style: solid;
-		border-width: 8px 15px;
+		border-width: 7px 10px;
 		background-color: #F0F0F0;
 		float: left;
 	}
