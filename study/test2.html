@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head {
+            width: 1000px;
+            height: 50px;
+            background-color: hotpink;
+            margin: 200px auto 0;
+            position: relative;
+        }
+
+        body {
+            height: 2000px;
+            background-image: url("2019-04-12.png");
+        }
+
+        .fixed {
+            width: 1000px;
+            height: 50px;
+            background-color: hotpink;
+            margin-left: -500px;
+            position: fixed;
+            top: 0;
+            left: 50%;
+        }
+
+        span{
+            font-size: 25px;
+            line-height: 50px;
+            margin: 0 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .op{
+            width: 800px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -400px;
+        }
+
+        .btn-gb{
+            width: 60px;
+            height: 50px;
+            border-radius: 25%;
+            position: absolute;
+            top: 0px;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body id="bd">
+
+
+<div class="head" id="hd">
+
+    <div class="btn-gb" id="bg">
+
+    </div>
+
+    <div class="op">
+        <span>太阳</span>
+        <span>水星</span>
+        <span>金星</span>
+        <span>地球</span>
+        <span>火星</span>
+        <span>木星</span>
+        <span>土星</span>
+        <span>天王星</span>
+        <span>海王星</span>
+    </div>
+
+
+</div>
+
+<script src="common.js"></script>
+
+<script type="text/javascript">
+
+    var hd = my$("hd");
+    var offsetTop = hd.offsetTop;
+
+    //div的滚动事件
+    my$("bd").onscroll = function () {
+        if (window.pageYOffset >= offsetTop) {
+
+            if (hd.className !== "fixed")
+                hd.className = "fixed";
+            console.log("???");
+
+        } else {
+            if (hd.className !== "head")
+                hd.className = "head";
+            console.log("!!!");
+        }
+    };
+
+
+
+    anim(my$("bg"),105);
+
+
+    function anim(element, target) {
+        clearInterval(element.timeId);
+        element.timeId = setInterval(function () {
+
+            var offsetLeft = element.offsetLeft;
+            console.log("offsetLeft "+offsetLeft);
+
+            var step=(target-offsetLeft)/10;
+
+            // console.log("step "+step);
+
+            // step = Math.ceil(step);
+            console.log("math.ceil(step) "+Math.ceil(step));
+
+            step =step>0?Math.ceil(step):Math.floor(step);
+            console.log("step>0?Math.ceil(step):Math.floor(step)  "+step);
+
+
+            // step=10;
+
+            element.style.left=step+offsetLeft+"px";
+
+            if ((step+offsetLeft) >= target  ) {
+                clearInterval(element.timeId);
+            }
+
+        },20);
+    }
+
+
+    var spans = document.getElementsByClassName("op")[0].getElementsByTagName("span");
+
+
+    for (let i = 0; i <spans.length; i++) {
+        spans[i].onmouseover=function () {
+            anim(my$("bg"),105);
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

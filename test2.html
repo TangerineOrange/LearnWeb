@@ -24,21 +24,24 @@
 
 		.father{
 			width: 1200px;
-			background-color: blue;
+			height: 900px;
+			background:-webkit-linear-gradient(top,pink,purple);
 		}
 
 		.son1{
 			width: 200px;
-			height: 400px;
+			height: 200px;
 			background-color: pink;
 		}
 		
 		.son2{
+			width: 200px;
 			height: 300px;
 			background-color: green;
 		}
 
 		.son3{
+			width: 200px;
 			height: 200px;
 			background-color: red;
 		}
@@ -50,7 +53,6 @@
 		}
 
 		.son1,.son2,.son3,.son4{
-			position: absolute;
 		}
 
 		.uncle{
@@ -66,23 +68,20 @@
 
 	<div class="father clearfix">
 
-		<div class="son1">
+		<div class="son1">son1
 		</div>
 
-		<div class="son2">
-			<img src="res/naruto.jpg" width="320" height="246" alt="">
-			????????
+		<div class="son2">son2
 		</div>
 
-		<div class="son3">
-			<img src="res/naruto.jpg" width="320" alt="">
+		<div class="son3">son3
 		</div>
 
-		<div class="son4">
+		<div class="son4">son4
 		</div>
 	</div>
 
-	<div class="uncle"></div>
+	<div class="uncle">uncle</div>
 	
 </body>
 </html>
