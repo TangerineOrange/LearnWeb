@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    //为系统的内置对象的原型中添加方法
+
+//    String.prototype.myReverse=function () {
+//      //this---->实例对象
+//      for(var i=this.length-1;i>=0;i--){
+//        console.log(this[i]);
+//      }
+//    };
+//
+//    var str=new String("abcdef");
+//    //对象调用了这个方法
+//    str.myReverse();
+//
+//    var str="jgosaufjewj";
+//    str.myReverse();
+
+    //实例对象调用的方法,如果在构造函数的prototype中存在,就可以直接调用
+
+    //为系统的Array的prototype中添加方法
+    Array.prototype.mySort=function () {
+        //this就是数组的实例对象--->arr
+
+      for(var i=0;i<this.length-1;i++){
+          for(var j=0;j<this.length-1-i;j++){
+              if(this[j]<this[j+1]){
+                  var temp=this[j];
+                this[j]=this[j+1];
+                this[j+1]=temp;
+              }//end if
+          }// end for
+      }//end for
+      for(var i=0;i<this.length;i++){
+          console.log(this[i]);
+      }
+    };
+    var arr=[10,20,30,40,50];
+    arr.mySort();
+
+    //为Object---->添加原型方法
+
+    Object.prototype.fdsfdsf=function () {
+      console.log("真神奇啊");
+    };
+
+    var obj=new Object();
+    obj.fdsfdsf();
+
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

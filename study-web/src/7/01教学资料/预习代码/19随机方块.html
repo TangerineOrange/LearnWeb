@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .map{
+      width: 800px;
+      height: 600px;
+      background-color: #CCC;
+    }
+  </style>
+
+</head>
+<body>
+<div class="map"></div>
+<script>
+  //产生随机数对象--->只要对象.方法就可以产生随机数
+  //    (function (window) {
+  //      //创建随机数的构造函数
+  //      function Random() {
+  //        //方法
+  //        this.getRandom=function (min,max) {
+  //          return Math.floor(Math.random()*(max-min)+min);
+  //        };
+  //      }
+  //      // var random=new Random();
+  //      //把random暴露给window
+  //      window.random=new Random();
+  //    })(window);
+  //
+  //    //console.log(window.random.getRandom(0,5));
+  //
+  //    console.log(random.getRandom(0,5));
+
+
+
+
+</script>
+<script>
+
+
+  //产生随机数的对象,并且该对象成为一个全局变量的对象
+  (function (window) {
+    //创建随机数的构造函数
+    var random={
+      getRandom:function (min,max) {
+        return Math.floor(Math.random()*(max-min)+min);
+      }
+    };
+    window.random=random;//把random对象暴露给window
+
+  })(window);
+
+  (function (window) {
+    //从页面中获取div这个元素,class--->map
+    var map=document.querySelector(".map");
+
+    //创建食物对象---food
+    //食物的构造函数
+    function Food(width,height,color) {
+      //设置食物的宽和高
+      this.width=width||20;//没传入宽,默认就是20px的宽度
+      this.height=height||20;
+      //横纵坐标
+      this.x=0;//横坐标---->随机的
+      this.y=0;//纵坐标---->随机的
+      this.color=color||"pink";
+      //创建的一个div元素
+      this.element=document.createElement("div");
+    }
+
+
+
+    Food.prototype.init=function (map) {
+      //初始化食物--要把食物加入到地图中
+      var div=this.element;
+      //设置div的样式
+      div.style.position="absolute";
+      div.style.width=this.width+"px";
+      div.style.height=this.height+"px";
+      div.style.backgroundColor=this.color;
+      //把div加入到地图中
+      map.appendChild(div);
+      //考虑横纵坐标的问题
+      this.render(map);
+    };
+    Food.prototype.render=function (map) {
+      //设置div的元素的随机位置
+      this.x=random.getRandom(0,map.offsetWidth/this.width)*this.width;
+      this.y=random.getRandom(0,map.offsetHeight/this.height)*this.height;
+      var div=this.element;
+      div.style.left=this.x+"px";
+      div.style.top=this.y+"px";
+    };
+
+
+    //把Food的对象,保存到window
+    var food=new Food(20,20,"green");
+    food.init(map);
+    // window.food=food;
+  })(window);
+
+
+
+
+
+
+
+  //console.log(window.random.getRandom(0,5));
+
+  //console.log(random.getRandom(0,5));
+</script>
+</body>
+</html>

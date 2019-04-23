@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+//    var person=new Object();
+//    person.name="小明";
+//    var dog=new Object();
+//    dog.name="哮天犬";
+//    //验证person和dog是什么类型的
+//    //对象是不是Object这种类型的
+//    console.log(person instanceof Object);
+//    console.log(dog instanceof Object);
+//    //通过new Object的方式创建的对象,是不能够很清晰的体现该对象是什么明确的类型,都是Object类型
+//
+//    var cat={
+//      name:"小猫"
+//    };
+//    console.log(cat instanceof Object);
+  </script>
+
+  <script>
+
+    //创建的对象,可以很明确的获取到该对象是什么类型?
+    //构造函数---可以明确对象是什么类型
+    function Person(name,age) {
+      this.name=name;
+      this.age=age;
+      this.sayHi=function () {
+          console.log("我叫"+this.name+"今年"+this.age+"岁了");
+      };
+    }
+    //创建对象
+    var p=new Person("小白",20);
+    var p2=new Person("小黑",20);
+    //查看p是不是Person这种类型
+    p.sayHi();
+    console.log(p instanceof Person);//验证p是不是属于Person类型
+
+    function Cat(name,age) {
+      this.name=name;
+      this.age=age;
+    }
+    var cat=new Cat("小猫猫",12);
+    console.log(cat instanceof Person);//验证cat是不是属于Person类型
+    console.log(cat instanceof Cat);//验证cat是不是属于Cat类型
+    console.log(cat instanceof Object);//验证cat是不是属于Object类型
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

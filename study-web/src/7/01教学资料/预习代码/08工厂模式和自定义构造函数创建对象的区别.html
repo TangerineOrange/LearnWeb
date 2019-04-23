@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    //工厂模式:可以一次性创建多个对象
+    function createObject(name,age) {
+      var obj=new Object();
+      obj.name=name;
+      obj.age=age;
+      return obj;
+    }
+    /*
+    * 1.首先在内存中开辟一块空间,存储对象
+    * 2.把this设置为当前的对象
+    * 3.把属性和方法设置值
+    * 4.把当前对象this返回
+    *
+    *
+    * */
+    function Person(name,age) {
+      //把这里的属性和方法给this这个对象,给属性和方法赋值
+      this.name=name;
+      this.age=age;
+      this.sayHi=function () {
+        //
+      };
+      console.log("代码执行了");
+    }
+    var obj1=createObject("小白",10);//工厂模式
+    //创建Person类型的对象------>创建Person的实例(实例对象)
+    var p1=new Person("小黑",20);//构造函数---优化后的工厂模式
+
+    /*
+    *
+    * createObject
+    * Person
+    * 共同点:都可以创建对象
+    * 不同点:
+    * createObject:有很明显的创建对象的代码:new Object
+    * 有return
+    * 函数名小写
+    * 不能非常的明确对象是属于什么类型.是Object类型
+    *
+    * Person:没有明显的创建对象
+    * 没有return
+    * 代码少于createObject的代码
+    * 把属性和方法直接给this
+    * this就是当前对象
+    * 函数名大写
+    * 非常的明确对象是属于Person类型,最终也是Object
+    *
+    *
+    *
+    * */
+
+
+
+    /*
+    * createObject--->没有通过new
+    * Person--->new---this
+    *
+    *
+    * */
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

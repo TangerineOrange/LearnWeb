@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    /*
+    *
+    * 构造函数和实例对象的关系?
+    *
+    * */
+    //构造函数
+    function Person(name,age) {
+      this.name=name;
+      this.age=age;
+    }
+    //创建对象---创建实例对象
+    var per=new Person("帅杨",18);
+    //实例对象是通过构造函数创建的
+
+    console.dir(per);//直接输出对象的结构
+    console.dir(Person);
+    console.log(per.__proto__.constructor===Person.prototype.constructor);
+    //constructor这个属性在实例中是没有的,但是在实例对象的__proto__中存在的
+    //Person构造函数中有一个属性prototype,里面有constructor
+    console.log(per.constructor===Person);
+
+
+    /*
+    *
+    * 实例对象中有一个__proto__,实例对象中的__proto__中有一个constructor
+    * 构造函数中有一个prototype,构造函数中的prototype中有一个constructor
+    *
+    * */
+
+
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

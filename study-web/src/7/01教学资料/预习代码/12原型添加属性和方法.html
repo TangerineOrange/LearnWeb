@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    //原型的作用之一:数据共享---节省空间
+    /*
+    * 构造函数中有原型:prototype,程序员使用的
+    * 实例对象中有原型:__proto__,浏览器使用的,不标准的,指向的位置就是构造函数的prototype指向的地方,prototype中的数据就可以被实例对象访问和使用
+    *
+    *
+    * 如果希望数据能够共享,应该把数据放在原型中写,属性和方法
+    * 如果数据不需要共享,那么就放在构造函数中定义
+    *
+    * */
+    //动物的构造函数----这里的属性和方法---不需要共享
+    function Animal(name,age) {
+      this.name=name;
+      this.age=age;
+      this.play=function () {
+          console.log("天天打豆豆");
+      };
+    }
+    //希望性别数据是共享的,希望，吃的行为和跑的行为是共享的,希望玩的行为不是共享的
+    //通过原型添加属性和方法---->这些属性和方法会被共享,节省空间
+    Animal.prototype.sex="雌";
+    Animal.prototype.eat=function () {
+        console.log("天天吃大骨头");
+    };
+    Animal.prototype.run=function () {
+        console.log("一跑一蹦跶");
+    };
+
+    //实例对象
+    var dog=new Animal("小段",21);
+    var cat=new Animal("助教",23);
+
+    //性别相同
+//    console.log(dog.sex);
+//    console.log(cat.sex);
+//    //方法调用
+//    dog.play();
+//    cat.play();
+//    //共享的方法调用
+//    dog.eat();
+//    cat.eat();
+//    dog.run();
+//    cat.run();
+
+    //构造函数中有什么?
+    //实例对象中有什么?
+    //原型对象中有什么?
+//    console.dir(Animal);
+//    console.dir(dog);
+
+    console.log(dog.__proto__===Animal.prototype);
+    console.log(dog.__proto__.constructor===Animal.prototype.constructor);
+    console.log(dog.constructor===Animal.prototype.constructor);
+
+
+
+
+
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

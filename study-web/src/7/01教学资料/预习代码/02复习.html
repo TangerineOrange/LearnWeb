@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    /*
+    *
+    * JavaScript是什么?
+    * 是一种编程语言,
+    * 是一门脚本语言:不需要编译,直接就执行,cmd,sql
+    * 是一门弱类型语言:声明变量都用var
+    * 是一门动态类型语言:变量(对象)在执行的时候,才能确定这个变量的类型
+    * 是一门解释性的语言:解释每行代码的含义
+    * 是一门基于对象的语言:js中的对象都是已经存在的了,直接使用对象,可以模拟面向对象
+    *
+    * JavaScript分三个部分:ECMAScript标准(基本语法),DOM(操作页面),BOM(操作浏览器)
+    *
+    * var n=10;console.log(N);//报错
+    *
+    * 变量声明了,没有赋值,结果是undefined
+    * 函数没有明确的返回值,结果是undefined
+    *
+    * 函数定义:函数表达式,函数的声明
+    *
+    * var ff=function(){}:
+    * function f1(){}
+    *
+    * (function(){})();
+    *
+    * 普通变量不能直接调用属性和方法
+    * 对象才可以直接调用属性和方法
+    *
+    *
+    * 值类型之间传递的是值
+    * 引用类型之间传递的是地址(引用)
+    *
+    *
+    * */
+//    var num=10;//值类型
+//
+//    function f1(x){
+//      x=100;
+//    }
+//
+//    f1(num);
+//
+//    console.log(num);
+
+
+    function Person(age){
+      this.age=age;
+    }
+    var p1=new Person(10);
+    var p2=p1;
+    p2.age=100;
+    console.log(p1.age);
+  </script>
+  
+  <script>
+    console.log(num);//undefined
+    var num=10;
+
+
+    f1();
+    function f1() {
+      
+    }
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

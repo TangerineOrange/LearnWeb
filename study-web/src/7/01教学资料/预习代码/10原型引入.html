@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    function Person(name,age) {
+      this.name=name;
+      this.age=age;
+      this.sayHi=function () {
+        console.log("您好,");
+      };
+    }
+    var p1=new Person("小助教",19);
+    var p2=new Person("小助教",19);
+    //p1和p2是不是同一个对象
+    //console.log(p1===p2);//
+    p1.sayHi();
+    p2.sayHi();
+    console.log(p1.sayHi===p2.sayHi);
+
+    console.dir(p1);
+    console.dir(p2);
+
+    //如果产生多个实例对象,就会浪费空间,如果要想节省空间,----->原型
+
+    //要解决数据共享---->节省空间
+
+
+    for(var i=0;i<100;i++){
+      var p1=new Person("小助教",19);
+      p1.sayHi();
+    }
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    /*
+    *
+    * 面向对象:是一种编程思想,找对象,注重结果
+    * 对象:有特征和行为,特征就是属性,行为就是方法
+    * 先找对象:学生中有个叫小明的,身高198,今年23岁,经常的吃臭豆腐,打游戏
+    * 创建对象:
+    * 调用对象中的内容
+    *
+    * 创建对象的方式:
+    * 1,字面量
+    * 2,new Object();
+    * 3,自定义构造函数
+    * 工厂模式创建对象
+    *
+    * */
+    //学生中有个叫小明的,身高198,今年23岁,经常的吃臭豆腐,打游戏,经常向别人介绍自己
+    /*
+    * 属性(特征):名字，身高，年龄
+    * 方法(行为):吃，打游戏,打招呼
+    *
+    * */
+    //new Object()
+    var stu1=new Object();
+    stu1.name="小明";
+    stu1.age=23;
+    stu1.height=198;
+    //添加方法
+    stu1.eat=function () {
+      console.log("吃米饭");
+    };
+    stu1.sayHi=function () {
+      console.log("我叫"+this.name+",今年"+this.age+"岁,身高:"+this.height);
+    };
+
+    stu1.eat();//调用
+    stu1.sayHi();
+
+    //创建第二个学生对象
+    var stu2=new Object();
+    stu2.name="小白";
+    stu2.sayHi=function () {
+      console.log("我叫"+this.name+",今年"+this.age+"岁,身高:"+this.height);
+    };
+    stu2.sayHi();
+
+    //new Object()缺点:每次创建对象都需要new Object();
+    //字面量定义对象,每次只能创建一个
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

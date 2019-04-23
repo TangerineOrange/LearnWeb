@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    /*
+    * 面向过程和面向对象都是编程思想.
+    * 面向过程:凡事都是亲力亲为,每一步都要清楚,注重的是过程
+    * 面向对象:找对对象,注重的是结果,所有的事情都是通过对象来进行操作
+    * 面向对象特性:封装,继承,多态
+    * 封装:把一系列的代码封装到函数,好多的函数,封装在对象中
+    * 继承:是类与类之间的关系,js中没有类的这个概念,通过原型模拟继承
+    * 多态:同一个行为针对不同的对象,产生不同的结果(模拟多态,但是几乎不用)
+    * 对象:特指的某个事物,具有属性和方法(看得见,摸得到,特指的某个东西)
+    * 哮天犬:是对象,
+    * 特征和行为
+    * 特征:毛色,体重,年龄，姓名-----属性
+    * 行为:飞，叫，咬人，吃东西，摇尾巴,变形.---方法
+    *
+    *
+    *
+    * */
+
+    var obj={
+      name:"小白兔",
+      age:123,
+      sayHi:function () {
+        console.log("嗨,阿涅哈斯诶呦");
+      },
+      dog:new Dog()
+
+    };
+
+    var obj2=new Number();
+    function Person() {
+      
+    }
+    var obj3=new Person();
+
+    //面向过程
+//    var num1=10;
+//    var num2=20;
+//    var sum=num1+num2;
+//    console.log(sum);
+
+    function JiSuan(x,y) {
+      this.x=x;
+      this.y=y;
+      this.getSum=function () {
+        return this.x+this.y;
+      }
+    }
+    var js=new JiSuan(10,20);
+
+    var obj={
+      x:10,
+      y:20,
+      getSum:function () {
+        return x+y;
+      }
+    };
+
+
+    /*
+    *
+    *
+    * 司机----人
+    * 小狗---动物
+    * 雷蛇鼠标--鼠标
+    * 奔驰汽车--车
+    * 车--都有轮子
+    * 奔驰汽车---轮子
+    *
+    * 动物,都吃东西,都睡觉
+    * 麻雀---飞
+    * 狗,吃,睡
+    *
+    *
+    * 所有的鸟--飞
+    * 麻雀---一跳一跳飞
+    * 野鸭子--直接飞
+    *
+    * */
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

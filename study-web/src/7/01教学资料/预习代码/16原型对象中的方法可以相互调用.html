@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    function Person() {
+      //this.eat();
+      //希望调用play的方法的时候就可以直接调用eat
+      this.play();
+    }
+    //向Person的原型中添加方法
+    Person.prototype.eat=function () {
+      console.log("吃东西");
+    };
+    Person.prototype.play=function () {
+      console.log("玩游戏");
+      this.eat();
+    };
+
+    var p=new Person();
+    //希望在实例化对象的时候就可以调用方法
+    //p.eat();
+    //p.play();
+
+    //原型对象的方法中可以直接调用
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

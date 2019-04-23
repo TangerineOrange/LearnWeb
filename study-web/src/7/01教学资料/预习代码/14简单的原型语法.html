@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    //构造函数
+    function Person(name,age) {
+      this.name=name;
+      this.age=age;
+    }
+    //向原型中添加属性和方法
+    //更简单的写法--->
+    Person.prototype={
+      sex:"男",
+      height:198,
+      play:function () {
+        console.log("今晚好好的玩一次,身体瞬间舒畅"+this.name);
+      }
+    };
+
+    var p1=new Person("乔峰",37);
+    var p2=new Person("初音",16);
+    p1.play();
+    p2.play();
+    console.dir(p1);
+    console.dir(p2);
+
+
+    //console.dir(Person);
+
+
+
+
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

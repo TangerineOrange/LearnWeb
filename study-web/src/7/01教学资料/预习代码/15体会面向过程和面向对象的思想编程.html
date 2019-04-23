@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div{
+      width: 200px;
+      height: 100px;
+      background-color: red;
+    }
+    #dv2{
+      width: 200px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<div id="dv"></div>
+
+<input type="button" value="显示效果2" id="btn2"/>
+<div id="dv2"></div>
+<script>
+  //纯面向过程:
+//  function my$(id) {
+//    return document.getElementById(id);
+//  }
+//  my$("btn").onclick=function () {
+//      my$("dv").style.backgroundColor="green";
+//  };
+
+
+//  function my$(id) {
+//    return document.getElementById(id);
+//  }
+  //面向对象
+  //按钮是对象,div是对象,颜色是一个属性
+//  function ChangeStyle(btnId,dvId,color) {
+//    this.btnObj=my$(btnId);//按钮对象
+//    this.dvObj=my$(dvId);//div对象
+//    this.color=color;//设置颜色属性
+//    //console.log(this);//构造函数中的this是实例对象
+//  }
+//  //原型中添加了一个初始化方法
+//  ChangeStyle.prototype.init=function () {
+//    var that=this;
+//      //console.log(this);//原型对象方法中的this
+//    this.btnObj.onclick=function () {
+//      //这里this---->按钮--->this.btnObj
+//        //点击按钮修改div的背景颜色
+//      that.dvObj.style.backgroundColor=that.color;
+//    };
+//  };
+//  //实例化对象
+//  var cs=new ChangeStyle("btn","dv","green");
+//  cs.init();
+
+  //构造函数中的this和原型对象方法中的this指向相同,都是实例对象
+
+
+</script>
+
+
+<script>
+  //更狠的封装
+  function my$(id) {
+    return document.getElementById(id);
+  }
+  function ChangeStyle(btnObj,dvObj,json) {
+    this.btnObj=btnObj;//按钮
+    this.dvObj=dvObj;//div
+    this.json=json;
+    this.init();//调用原型对象中的方法
+  }
+  //向原型中添加方法
+  ChangeStyle.prototype.init=function () {
+    var that=this;//保存对象
+    //为元素注册点击事件
+    this.btnObj.onclick=function () {
+      //设置某个元素中样式多个属性的值
+      for(var key in that.json){
+        that.dvObj.style[key]=that.json[key];
+      }
+    };
+  };
+  var json={
+    "backgroundColor":"yellow",
+    "width":"500px",
+    "height":"200px",
+    "border":"2px solid blue"
+  };
+  var cs=new ChangeStyle(my$("btn"),my$("dv"),json);//实例化对象
+
+
+
+
+//  var cs=new ChangeStyle(my$("btn"),my$("dv"),json);//实例化对象
+//  cs.init();
+
+
+
+</script>
+</body>
+</html>
