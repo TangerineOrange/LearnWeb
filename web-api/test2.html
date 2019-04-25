@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .head {
+            width: 1000px;
+            height: 50px;
+            background-color: hotpink;
+            position: absolute;
+            top: 200px;
+            margin-left: -500px;
+            left: 50%;
+            z-index: 1000;
+        }
+
+        body {
+            height: 2000px;
+            background-image: url("2019-04-12.png");
+        }
+
+        .fixed {
+            width: 1000px;
+            height: 50px;
+            background-color: hotpink;
+            position: fixed;
+            margin-left: -500px;
+            top: 0;
+            left: 50%;
+            z-index: 1000;
+        }
+
+        span {
+            font-size: 25px;
+            line-height: 50px;
+            margin: 0 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .op {
+            width: 800px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -400px;
+        }
+
+        .btn-gb {
+            width: 60px;
+            height: 50px;
+            border-radius: 25%;
+            position: absolute;
+            top: 0px;
+            background-color: deeppink;
+        }
+
+        /*无具体用途，用于占位 */
+        .blank {
+            width: 10px;
+            height: 280px;
+        }
+
+
+        /*位置移动*/
+        .sfq-out {
+            width: 1226px;
+            height: 460px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .sfq1, .sfq2, .sfq3, .sfq4, .sfq5 {
+            position: absolute;
+            top: 0;
+            display: block;
+        }
+
+        .sfq2 {
+            left: 245px;
+        }
+
+        .sfq3 {
+            left: 490px;
+        }
+
+        .sfq4 {
+            left: 735px;
+        }
+
+        .sfq5 {
+            left: 980px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+
+        .rb-menu {
+            position: fixed;
+            right: 0px;
+            bottom: 10px;
+        }
+
+        .rb-menu ul {
+            position: relative;
+            right: 0;
+            bottom: 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .rb-menu li {
+            position: absolute;
+            right: 0;
+        }
+
+        .rb-menu span {
+            border-width: 1px 1px 0 1px;
+            border-color: #333;
+            border-style: solid;
+            background-color: white;
+
+            width: 170px;
+            height: 50px;
+            padding: 5px 10px;
+            vertical-align: middle;
+            line-height: 50px;
+            display: inline-block;
+            font-size: 15px;
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .item1 {
+            bottom: 245px;
+        }
+
+        .item2 {
+            bottom: 184px;
+        }
+
+        .item3 {
+            bottom: 123px;
+        }
+
+        .item4 {
+            bottom: 62px;
+        }
+
+        .item5 {
+            bottom: 1px;
+        }
+
+
+        .muma-box {
+            width: 1200px;
+            height: 600px;
+            position: absolute;
+            top: 1200px;
+            left: 50%;
+            margin-left: -600px;
+        }
+
+        .muma-img1, .muma-img2, .muma-img3, .muma-img4, .muma-img5 {
+            position: absolute;
+            border-radius: 5px;
+            border: 1px solid #9E9B99;
+
+        }
+
+        #muma-rr, #muma-ll {
+            position: absolute;
+        }
+
+        .muma-img1 {
+            top: 330px;
+            left: 220px;
+            z-index: 50;
+            box-shadow: 1px 5px 10px 1px #333;
+        }
+
+        .muma-img2 {
+            width: 420px;
+            height: auto;
+            top: 200px;
+            right: 150px;
+            z-index: 49;
+            opacity: 0.8;
+            box-shadow: 1px 5px 5px 1px #333;
+
+        }
+
+        .muma-img5 {
+            width: 420px;
+            height: auto;
+            top: 200px;
+            left: 150px;
+            z-index: 49;
+            opacity: 0.8;
+            box-shadow: 1px 5px 5px 1px #333;
+        }
+
+        .muma-img3 {
+            width: 240px;
+            height: auto;
+            top: 150px;
+            right: 300px;
+            z-index: 48;
+            opacity: 0.5;
+        }
+
+        .muma-img4 {
+            width: 240px;
+            height: auto;
+            top: 150px;
+            left: 300px;
+            z-index: 48;
+            opacity: 0.5;
+        }
+
+        #muma-rr {
+            width: 60px;
+            height: auto;
+            top: 200px;
+            right: 10px;
+            z-index: 51;
+            display: none;
+        }
+
+        #muma-ll {
+            width: 60px;
+            height: auto;
+            top: 200px;
+            left: 10px;
+            z-index: 51;
+            display: none;
+        }
+
+        .muma-box:hover #muma-ll {
+            display: block;
+        }
+
+        .muma-box:hover #muma-rr {
+            display: block;
+        }
+
+        #fly{
+            position: absolute;
+
+        }
+
+
+    </style>
+
+
+    <!-- 宽度变化 -->
+    <!--.sfq-out {-->
+    <!--width: 1226px;-->
+    <!--height: 460px;-->
+    <!--overflow: hidden;-->
+    <!--margin: 0 auto;-->
+    <!--}-->
+
+    <!--.sfq1, .sfq2, .sfq3, .sfq4, .sfq5 {-->
+    <!--width: 225px;-->
+    <!--overflow: hidden;-->
+    <!--display: inline-block;-->
+    <!--float: left;-->
+    <!--}-->
+
+
+    <!--位置移动 -->
+    <!--.sfq-out {-->
+    <!--width: 1226px;-->
+    <!--height: 460px;-->
+    <!--overflow: hidden;-->
+    <!--position: relative;-->
+    <!--margin: 0 auto;-->
+    <!--}-->
+
+    <!--.sfq1, .sfq2, .sfq3, .sfq4, .sfq5 {-->
+    <!--position: absolute;-->
+    <!--top: 0;-->
+    <!--display: block;-->
+    <!--}-->
+
+    <!--.sfq2 {-->
+    <!--left: 245px;-->
+    <!--}-->
+
+    <!--.sfq3 {-->
+    <!--left: 490px;-->
+    <!--}-->
+
+    <!--.sfq4 {-->
+    <!--left: 735px;-->
+    <!--}-->
+
+    <!--.sfq5 {-->
+    <!--left: 980px;-->
+    <!--}-->
+
+
+</head>
+<body id="bd">
+
+
+<div class="head" id="hd">
+
+    <div class="btn-gb" id="bg">
+
+    </div>
+
+    <div class="op">
+        <span>太阳</span>
+        <span>水星</span>
+        <span>金星</span>
+        <span>地球</span>
+        <span>火星</span>
+        <span>木星</span>
+        <span>土星</span>
+        <span>天王星</span>
+        <span>海王星</span>
+    </div>
+</div>
+
+<div class="blank"></div>
+
+<div class="sfq-out" id="div-sfq-out">
+    <a href="#" id="a-sfq1" class="sfq1"><img src="img/1.jpg" width="1226" height="460" alt=""></a>
+    <a href="#" id="a-sfq2" class="sfq2"><img src="img/2.jpg" width="1226" height="460" alt=""></a>
+    <a href="#" id="a-sfq3" class="sfq3"><img src="img/3.jpg" width="1226" height="460" alt=""></a>
+    <a href="#" id="a-sfq4" class="sfq4"><img src="img/4.jpg" width="1226" height="460" alt=""></a>
+    <a href="#" id="a-sfq5" class="sfq5"><img src="img/5.jpg" width="1226" height="460" alt=""></a>
+</div>
+
+<div class="rb-menu" id="div-rb-menu">
+    <ul>
+        <li class="item1"><span><img src="img/bgg.png" alt="">想吃<strong>碧根果</strong> 吗？</span></li>
+        <li class="item2"><span><img src="img/nyg.png" alt="">想吃<strong>牛油果</strong> 吗？</span></li>
+        <li class="item3"><span><img src="img/ps.png" alt="">想吃<strong>披萨</strong> 吗？</span></li>
+        <li class="item4"><span><img src="img/cm.png" alt="">想吃<strong>草莓</strong> 吗？</span></li>
+        <li class="item5"><span><img src="img/ss.png" alt="">想吃 <strong>寿司</strong> 吗？</span></li>
+    </ul>
+</div>
+
+
+<div class="muma-box" id="div-muma-box">
+    <img src="img/iphoneXS.PNG" alt="" class="muma-img1">
+    <img src="img/ipadAir.PNG" alt="" class="muma-img2">
+    <img src="img/ipadMini.PNG" alt="" class="muma-img3">
+    <img src="img/apple%20watch.PNG" alt="" class="muma-img4">
+    <img src="img/iphoneXR.PNG" alt="" class="muma-img5">
+
+
+    <img src="img/rr2.png" alt="" id="muma-rr">
+    <img src="img/ll2.png" alt="" id="muma-ll">
+</div>
+
+<img src="img/shui1.png" alt="" id="fly">
+
+
+<script src="common.js"></script>
+<script src="固定悬浮导航栏+筋斗云.js"></script>
+<script src="手风琴.js"></script>
+<script src="开机动画.js"></script>
+<script src="旋转木马.js"></script>
+
+<script type="text/javascript">
+
+
+    var fly = document.getElementById("fly");
+
+
+
+
+    document.onmousemove=function (e) {
+        //鼠标相对于页面的可视区域的横坐标
+        // fly.style.left=e.clientX+"px";
+        //鼠标相对于页面的可视区域的纵坐标
+        // fly.style.top=e.clientY+"px";
+
+        fly.style.left=e.pageX+"px";
+  fly.style.top=e.pageY+"px";
+    };
+
+
+</script>
+
+</body>
+</html>
