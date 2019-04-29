@@ -30,18 +30,46 @@
         show
     </button>
 
+    <button class="anim">
+        anim
+    </button>
+    <button class="slideToggle">
+        slideToggle
+    </button>
+    <button class="STOP">
+        STOP
+    </button>
+
 
     <div class="pink-div"></div>
     <div class="green-div"></div>
 <script>
+
+
     $("button.hide").click(function(){
         $("div.pink-div").hide("slow",function () {
-            alert("hide!!")
         });
     });
     $("button.show").click(function(){
-        $("div.pink-div").show();
+        $("div.pink-div").show("slow");
     });
+
+    $("button.anim").click(function(){
+        $("div.green-div").animate({height:'250px'},500,function () {
+            console.log("anim");
+        })
+    });
+
+    $("button.slideToggle").click(function(){
+        $("div.green-div").slideToggle()(1000);
+    });
+
+    $("button.STOP").click(function(){
+        $("div.green-div").stop("",false,true);
+    });
+
+
+
 
 </script>
 
