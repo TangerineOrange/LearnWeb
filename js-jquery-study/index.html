@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 300px;
+            border: 1px solid red;
+            overflow: hidden;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        .content {
+            width: 180px;
+            height: auto;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .scroll-bar-bg {
+            width: 20px;
+            height: 300px;
+            background: #c0c0c0;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .scroll-bar {
+            width: 20px;
+            height: 0;
+            background: red;
+
+            border-radius: 8px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+
+        ul, li {
+            list-style: none;
+        }
+
+        .tab-test {
+            margin-top: 120px;
+        }
+
+        .tab-test li {
+            padding: 5px 10px;
+            display: inline-block;
+            background-color: hotpink;
+        }
+
+        .tab-test li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #square1 {
+            width: 500px;
+            height: 500px;
+            background-color: #CCCCCC;
+            position: relative;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+
+        #square1 div {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+
+    <div id="div-content" class="content">
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头
+        床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头 床前明月光啊，明月光，疑是地上霜啊，举头嘿嘿
+    </div>
+    <div id="div-bar-bg" class="scroll-bar-bg">
+    </div>
+    <div id="div-bar" class="scroll-bar">
+    </div>
+</div>
+
+<ul class="tab-test">
+    <li><a href="#">123</a></li>
+    <li><a href="#">123</a></li>
+    <li><a href="#">123</a></li>
+    <li><a href="#">123</a></li>
+    <li><a href="#">123</a></li>
+</ul>
+
+<table id="tb" border="1">
+    <tbody id="tbd">
+    <tr>
+        <td>猪猪:</td>
+        <td>我喜欢吃肉</td>
+    </tr>
+    </tbody>
+</table>
+
+昵称：<input id="nicheng" type="text" value="">
+<br>
+<textarea id="conmment" rows="9" cols="20"></textarea>
+<br>
+<input id="btn" type="button" value="comment">
+
+<input type="button" value="START" id="START-btn">
+
+
+<div id="square1">square1
+</div>
+
+</body>
+
+<script src="scroll-test.js"></script>
+<script src="tab-test.js"></script>
+<script src="comment-test.js"></script>
+<script src="snakeAndsnack.js"></script>
+
+<script>
+
+</script>
+
+</html>
