@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index-jquery</title>
+
+    <script src="jquery-3.4.0.js"></script>
+
+    <style>
+        .pink-div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .green-div{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button class="hide">
+        hide
+    </button>
+    <button class="show">
+        show
+    </button>
+
+
+    <div class="pink-div"></div>
+    <div class="green-div"></div>
+<script>
+    $("button.hide").click(function(){
+        $("div.pink-div").hide("slow",function () {
+            alert("hide!!")
+        });
+    });
+    $("button.show").click(function(){
+        $("div.pink-div").show();
+    });
+
+</script>
+
+
+</body>
+</html>
