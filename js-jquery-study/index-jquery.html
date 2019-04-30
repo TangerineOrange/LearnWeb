@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>index-jquery</title>
@@ -7,19 +8,26 @@
     <script src="jquery-3.4.0.js"></script>
 
     <style>
-        .pink-div{
+        .pink-div {
             width: 100px;
             height: 100px;
             background-color: pink;
         }
 
-        .green-div{
+        .green-div {
             width: 100px;
             height: 100px;
             background-color: green;
         }
+
+        .show-something {
+            width: 200px;
+            height: 200px;
+            border: 1px solid rebeccapurple;
+        }
     </style>
 </head>
+
 <body>
 
 
@@ -39,40 +47,80 @@
     <button class="STOP">
         STOP
     </button>
+    <button class="get">
+        get
+    </button>
+    <button class="post">
+        post
+    </button>
 
 
     <div class="pink-div"></div>
     <div class="green-div"></div>
-<script>
+    <div class="show-something"></div>
 
+    <div id="divCustomers"></div>
 
-    $("button.hide").click(function(){
-        $("div.pink-div").hide("slow",function () {
+    <script>
+        $("button.hide").click(function () {
+            $("div.pink-div").hide("slow", function () {});
         });
-    });
-    $("button.show").click(function(){
-        $("div.pink-div").show("slow");
-    });
+        $("button.show").click(function () {
+            $("div.pink-div").show("slow");
+        });
 
-    $("button.anim").click(function(){
-        $("div.green-div").animate({height:'250px'},500,function () {
-            console.log("anim");
-        })
-    });
+        $("button.anim").click(function () {
+            $("div.green-div").animate({
+                height: '250px'
+            }, 500, function () {
+                console.log("anim");
+            })
+        });
 
-    $("button.slideToggle").click(function(){
-        $("div.green-div").slideToggle()(1000);
-    });
+        $("button.slideToggle").click(function () {
+            $("div.green-div").slideToggle()(1000);
+        });
 
-    $("button.STOP").click(function(){
-        $("div.green-div").stop("",false,true);
-    });
+        $("button.STOP").click(function () {
+            $("div.green-div").stop("", false, true);
+        });
+
+        $("button.get").click(function () {
+            $.get({
+                url: "demo.php",
+                success: function (data,status) {
+                    alert("数据: " + data + "\n状态: " + status);
+                }
+            });
+        });
+        $("button.post").click(function () {
+           $.post("demo2.php",{
+               name:"???",
+               url:"asd"
+           },function (data, status) {
+                // alert("data "+data.name+"url "+data.url+"status "+status);
+                alert("data "+data +"status "+status);
+           });
+        });
+
+        //JSONP
+
+        $.getJSON("http://www.runoob.com/try/ajax/jsonp.php?jsoncallback=?",function(data) {
+
+            var html = '<ul>';
+            for(var i = 0; i < data.length; i++)
+            {
+                html += '<li>' + data[i] + '</li>';
+            }
+            html += '</ul>';
+
+            $('#divCustomers').html(html);
+        });
 
 
-
-
-</script>
+    </script>
 
 
 </body>
+
 </html>

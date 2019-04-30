@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+    <script src="jquery-3.4.0.js"></script>
+
+    <link href="jquery-practice.css" rel="stylesheet"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .left {
+            width: 200px;
+            height: 200px;
+            overflow: scroll;
+            background-color: aquamarine
+        }
+
+        .chose {
+            background-color: #ccc;
+        }
+
+        .left-li {
+            background-color: aquamarine;
+        }
+
+        .right-li {
+            background-color: goldenrod;
+        }
+
+        .right {
+            width: 200px;
+            height: 200px;
+            overflow: scroll;
+            background-color: goldenrod;
+        }
+
+        .buttons {
+            width: 30px;
+            height: 200px;
+        }
+
+        .left li,
+        .right li {
+            cursor: pointer;
+        }
+
+        .city-choose {
+            width: 500px;
+            height: 200px;
+        }
+
+        .city-choose div {
+            float: left;
+        }
+
+        .weibo-box {
+            width: 800px;
+            height: auto;
+            min-height: 500px;
+            border: 1px solid mediumseagreen;
+        }
+
+        .content {
+            margin: 0 auto;
+            width: 600px;
+
+
+            border-bottom: 1px dashed #333333;
+        }
+
+        #area {
+            margin: 50px auto 0;
+            width: 600px;
+            height: 300px;
+            display: block;
+            border-bottom: 1px dashed #333333;
+        }
+    </style>
+</head>
+
+<body>
+
+<table border="1px">
+    <tbody>
+    <tr>
+        <td>
+            <input type="checkbox" name="" id="all">
+        </td>
+        <td><span>food</span></td>
+        <td><span>price</span></td>
+        <td><span>count</span></td>
+
+    </tr>
+
+    <tr>
+        <!-- ----------------------------- -->
+        <td>
+            <input type="checkbox" name="" id="tt">
+        </td>
+        <td><span>tomato</span></td>
+        <td><span>19$</span></td>
+        <td><span>10</span></td>
+    </tr>
+
+    <tr>
+        <!-- ----------------------------- -->
+        <td>
+            <input type="checkbox" name="" id="pp">
+        </td>
+        <td><span>potato</span></td>
+        <td><span>5$</span></td>
+        <td><span>7</span></td>
+    </tr>
+
+    <tr>
+        <!-- ----------------------------- -->
+        <td>
+            <input type="checkbox" name="" id="aa">
+        </td>
+        <td><span>apple</span></td>
+        <td><span>22$</span></td>
+        <td><span>6</span></td>
+    </tr>
+    </tbody>
+
+</table>
+
+<!--  CITY CHOOSE----------------------------- -->
+
+
+<div class="city-choose">
+
+    <div class="left">
+        <ul>
+            <li><span>NEW YORK</span></li>
+            <li><span>SAN FRANCISCO</span></li>
+            <li><span>TOKYO</span></li>
+            <li><span>BEIJING</span></li>
+            <li><span>SHANGHAI</span></li>
+        </ul>
+
+    </div>
+
+    <div class="buttons">
+        <button id="all-to-right"> >></button>
+        <button id="all-to-left">
+            <<
+        </button>
+        <button id="one-to-right"> >
+        </button>
+        <button id="one-to-left">
+            <
+        </button>
+    </div>
+    <div class="right">
+        <ul>
+
+        </ul>
+    </div>
+
+</div>
+
+
+<div class="weibo-box">
+    WeiBo
+    <textarea name="" id="area" cols="30" rows="10"></textarea>
+
+    <button id="send">send</button>
+
+    <!--    <div class="content">-->
+
+    <!--    </div>-->
+</div>
+
+<div class="screen-box">
+
+    <div class="screen">
+    </div>
+
+    <div class="send-box">
+
+        <input type="text" id="send-content">
+        <button>send</button>
+
+    </div>
+
+
+</div>
+<script>
+    //弹幕
+    $("div.send-box>button").click(function () {
+
+        var top = Math.floor(Math.random() * 481) + "px";
+        var left = 700 + "px";
+        var p = $("<p></p>").text($("#send-content").val()).css({"top": top, "left": left});
+
+
+        var color = "rgb("+Math.floor(Math.random() * 256)+","+Math.floor(Math.random() * 256)+","+Math.floor(Math.random() * 256)+")";
+
+        console.log(color);
+
+        $("div.screen").append(p);
+        $(p).animate({left: -Math.ceil($(p).width())+"px"}, 5000);
+        $(p).css("color",color);
+
+    });
+
+
+    //Weibo
+
+    $("#send").click(function () {
+        var $area = $("#area");
+        $("div.weibo-box").append($("<div></div>").addClass("content").text($area.val()));
+        $area.val("");
+    });
+
+
+    //CITY CHOOSE
+
+    $("div.left li").click(function () {
+        console.log("left click");
+
+        $("div.left li").attr("class", "left-li");
+        $("div.right li").attr("class", "right-li");
+
+        $(this).attr("class", "chose");
+    });
+
+    $("div.right li").click(function () {
+        console.log("right click");
+    });
+
+    $("#all-to-right").click(function () {
+        $("div.left li").attr("class", "right-li");
+        $("div.right>ul").append($("div.left>ul>li"));
+    });
+
+
+    $("#all-to-left").click(function () {
+        $("div.right li").attr("class", "left-li");
+        $("div.left>ul").append($("div.right>ul>li"));
+    });
+
+
+    $("#one-to-right").click(function () {
+        $("div.right ul").append($("div.left li").filter(".chose"));
+    });
+    $("#one-to-left").click(function () {
+        $("div.left ul").append($("div.right li").filter(".chose"));
+    });
+
+
+    // MULTI CHECK BOX
+    $("#all").change(function () {
+        $("#pp,#tt,#aa").prop("checked", $.prop(this, "checked"));
+    });
+
+    $("#pp,#tt,#aa").change(function () {
+        if ($("#pp:checked,#tt:checked,#aa:checked").length === 3) {
+            $("#all").prop("checked", true);
+        } else {
+            $("#all").prop("checked", false);
+        }
+    });
+</script>
+
+
+<div style="width: 100px;height: 500px;"></div>
+
+
+</body>
+
+</html>

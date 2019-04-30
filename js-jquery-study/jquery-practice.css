@@ -1,0 +1,18 @@
+.screen-box{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #CCCCCC;
+}
+
+.screen{
+    width: 700px;
+    height: 500px;
+    margin: 30px auto;
+    border: 1px solid #21dda8;
+    position: relative;
+    overflow: hidden;
+}
+.screen p{
+    position: absolute;
+}
